@@ -8,9 +8,17 @@ export class Battle{
   private heroUn: Hero;
   private heroDeux: Hero;
 
+  get _heroUn():Hero{
+    return this.heroUn;
+  }
+
+  get _heroDeux():Hero{
+    return this.heroDeux;
+  }
+
   constructor(heroUn: Hero, heroDeux: Hero) {
     this.heroUn = heroUn;
-    this.heroDeux = heroDeux;
+    this.heroDeux = heroDeux; 
 
     const heroes= [Mage, Paladin, Rogue];
     const rand = Math.floor(Math.random() * 3);

@@ -3,6 +3,7 @@ import { Paladin } from "./hero/paladin";
 import { Mage } from "./hero/mage";
 import { Rogue } from "./hero/rogue";
 import { Battle } from './battle/battle';
+import { Hero } from './hero/hero';
 
 @Component({
   selector: 'app-rpg',
@@ -10,6 +11,8 @@ import { Battle } from './battle/battle';
   styleUrls: ['./rpg.component.scss']
 })
 export class RpgComponent implements OnInit {
+
+  battle!: Battle;
 
   constructor() {
     this.testRpg();
@@ -19,8 +22,7 @@ export class RpgComponent implements OnInit {
   }
 
   private testRpg() {
-    let battle = new Battle(new Mage('Morgane'), new Rogue('Marine'));
-    battle.startFight();
-}
+    this.battle = new Battle(new Mage('Morgane'), new Paladin('Marine'));
+  }
 
 }

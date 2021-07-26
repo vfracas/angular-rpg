@@ -7,6 +7,8 @@ export abstract class Hero{
   protected _level!: number;
   protected _exp!: number;
   protected _critrate!: number;
+  protected _image!: string;
+  protected _color!: string;
 
   get name():string{
     return this._name;
@@ -38,6 +40,14 @@ export abstract class Hero{
 
   get critrate():number{
     return this._critrate;
+  }
+
+  get image():string{
+    return this._image;
+  }
+
+  get color():string{
+    return this._color;
   }
 
   protected constructor(guild:string, lifepoints:number[], strength:number[], defense:number, name:string) {
