@@ -1,25 +1,20 @@
 <div class="container">
   <div class="character">
-    <div class='hero-card'>
-      <div class="hero-name-life">
-        <p>{{ battle._heroUn.name }}</p>
-        <p>{{ battle._heroUn.lifepoints[0] }} / {{ battle._heroUn.lifepoints[1] }} Pv</p>
-      </div>
-      <img src="{{ battle._heroUn.image }}" [class.reverse]="battle._heroUn.guild ==='Mage'" alt="heroUn image">
+    <p class="hero-lifepoints">{{ battle._heroUn.lifepoints[0] }} / {{ battle._heroUn.lifepoints[1] }} Pv</p>
+    <div class="hero-title">
       <p>{{ battle._heroUn.guild }}</p>
+      <p class="hero-name">{{ battle._heroUn.name }}</p>
     </div>
-    <button>Attaquer</button>
+    <img src="{{ battle._heroUn.image }}" [class.reverse]="battle._heroUn.guild ==='Mage'" alt="heroUn image">
   </div>
 
-  <div class="character">
-    <div class='hero-card'>
-      <div class="hero-name-life">
-        <p>{{ battle._heroDeux.name }}</p>
-        <p>{{ battle._heroDeux.lifepoints[0] }} / {{ battle._heroDeux.lifepoints[1] }} Pv</p>
-      </div>
-      <img src="{{ battle._heroDeux.image }}" [class.reverse]="battle._heroDeux.guild !=='Mage'" alt="heroDeux image">
+  <div class="character enemy">
+    <p class="hero-lifepoints">{{ battle._heroDeux.lifepoints[0] }} / {{ battle._heroDeux.lifepoints[1] }} Pv</p>
+    <div class="hero-title">
       <p>{{ battle._heroDeux.guild }}</p>
+      <p class="hero-name">{{ battle._heroDeux.name }}</p>
     </div>
+    <img src="{{ battle._heroDeux.image }}" [class.reverse]="battle._heroDeux.guild !=='Mage'" alt="heroDeux image">
   </div>
 
 </div>

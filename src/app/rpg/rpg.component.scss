@@ -1,8 +1,13 @@
 .container{
+  height: 70%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-image: url('../../assets/background.png');
+  background-size: cover;
+  margin: auto;
 }
 
 .reverse{
@@ -10,35 +15,37 @@
 }
 
 .character{
+  height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  
-  .hero-card{
-    height: 350px;
-    width: 250px;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .hero-lifepoints{
+    width: 70%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 3px;
+    background-color: rgb(58, 238, 58);
+  }
+
+  .hero-title{
+    height: 30px;
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #ffed4e;
+    background-color: rgba($color: #bbbbbb, $alpha: 0.5);
 
-    .hero-name-life{
-      width: 90%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: flex-end;
-      background-color: lightgray;
+    .hero-name{
+      font-style: italic;
     }
+  }
 
-    img{
-      width: 80%;
-    }
+  img{
+    width: 70%;
   }
 }
 
