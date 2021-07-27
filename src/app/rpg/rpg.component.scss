@@ -1,6 +1,6 @@
 .container{
-  height: 70%;
-  width: 70%;
+  height: 80%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -14,25 +14,34 @@
   transform: scaleX(-1);
 }
 
+
+
 .character{
   height: 90%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
+  &.enemy{
+    align-items: flex-end;
+  }
 
   .hero-lifepoints{
     width: 70%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 3px;
+    padding: 2px 8px 2px 0;
     background-color: rgb(58, 238, 58);
+    border-radius: 15px;
+    border: 2mm ridge rgba(100, 100, 100, .6);;
   }
 
   .hero-title{
     height: 30px;
-    width: 120px;
+    min-width: 150px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -45,7 +54,15 @@
   }
 
   img{
-    width: 70%;
+    width: 80%;
+
+    &.resize{
+      width: 61%;
+    }
+
+    &.resize-bis{
+      width: 73%;
+    }
   }
 }
 

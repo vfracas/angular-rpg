@@ -5,7 +5,7 @@
       <p>{{ battle._heroUn.guild }}</p>
       <p class="hero-name">{{ battle._heroUn.name }}</p>
     </div>
-    <img src="{{ battle._heroUn.image }}" [class.reverse]="battle._heroUn.guild ==='Mage'" alt="heroUn image">
+    <img src="{{ battle._heroUn.image }}" [class.reverse]="checkHero(battle._heroUn)" [class.resize]="battle._heroUn.guild === 'Warlock'" [class.resize-bis]="battle._heroUn.guild === 'Chaman' || battle._heroUn.guild === 'Tauren'" alt="heroUn image">
   </div>
 
   <div class="character enemy">
@@ -14,7 +14,7 @@
       <p>{{ battle._heroDeux.guild }}</p>
       <p class="hero-name">{{ battle._heroDeux.name }}</p>
     </div>
-    <img src="{{ battle._heroDeux.image }}" [class.reverse]="battle._heroDeux.guild !=='Mage'" alt="heroDeux image">
+    <img src="{{ battle._heroDeux.image }}" [class.reverse]="!checkHero(battle._heroDeux)" [class.resize]="battle._heroDeux.guild === 'Warlock'" [class.resize-bis]="battle._heroDeux.guild === 'Chaman' || battle._heroDeux.guild === 'Tauren'" alt="heroDeux image">
   </div>
 
 </div>

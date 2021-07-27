@@ -18,7 +18,7 @@ export class Battle{
 
   constructor(heroUn: Hero, heroDeux: Hero) {
     this.heroUn = heroUn;
-    this.heroDeux = heroDeux; 
+    this.heroDeux = heroDeux;
 
     const heroes= [Mage, Paladin, Rogue];
     const rand = Math.floor(Math.random() * 3);
@@ -26,6 +26,7 @@ export class Battle{
     const hero2 = heroes[rand];
     //this.heroUn = new hero1('Pollux');
     //this.heroDeux = new hero2('Castor');
+    this.startFight();
   }
 
   randomNumber(max: number, min: number = 0): number {
@@ -36,13 +37,13 @@ export class Battle{
     let heroes = [this.heroUn, this.heroDeux];
     console.log(this.heroUn.name + ' ( ' + this.heroUn.guild + ' )' + ' V.S.' + this.heroDeux.name + ' ( ' + this.heroDeux.guild + ' )')
     // faire fonction random entre 2 valeurs
-    let indexStarter = this.randomNumber(heroes.length - 1);
-    let indexSecond = Math.abs(indexStarter - 1);
-    while (heroes[indexStarter].lifepoints[0] > 0 && heroes[indexSecond].lifepoints[0] > 0) {
-      heroes[indexStarter].attack(heroes[indexSecond]);
-      heroes[indexSecond].attack(heroes[indexStarter]);
-      indexStarter = this.randomNumber(heroes.length - 1);
-      indexSecond = Math.abs(indexStarter - 1);
+    // let indexStarter = this.randomNumber(heroes.length - 1);
+    // let indexSecond = Math.abs(indexStarter - 1);
+    while (this.heroUn.lifepoints[0] > 0 && this.heroDeux.lifepoints[0] > 0) {
+      this.heroUn.attack(this.heroDeux);
+      this.heroDeux.attack(this.heroUn);
+      // indexStarter = this.randomNumber(heroes.length - 1);
+      // indexSecond = Math.abs(indexStarter - 1);
       // modifier again les index starter/second via random
     }
   }
