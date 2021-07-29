@@ -1,0 +1,25 @@
+<div class="character" [class.enemy]="isEnemy">
+  <div class="hero-infos" [class.enemy]="isEnemy">
+    <div class="hero-lifepoints"
+        [ngStyle]="{'justify-content': isEnemy ? 'flex-end' : 'flex-start'}"
+    >
+      <div class="remaining-lifepoints"
+        [class.d-none]="heroes.lifepoints[0] <= 0"
+        [class]
+        [ngStyle]="{'width': this.health + '%','background-color': this.health > 25 ? 'rgb(58, 238, 58)' : 'rgb(226, 23, 23)'}"
+      >
+      </div>
+    </div>
+    <div class="hero-title">
+      <p>{{ heroes.guild }}</p>
+      <p class="hero-name">{{ heroes.name }}</p>
+    </div>
+  </div>
+  <img src="{{ heroes.image }}"
+      [class.reverse]="(!heroes.checkHero() && isEnemy) || (heroes.checkHero() && !isEnemy)"
+      [class.resize]="heroes.guild === 'Warlock'"
+      [class.resize-bis]="heroes.guild === 'Chaman' || heroes.guild === 'Tauren' || heroes.guild === 'Paladin'"
+      [class.resize-ter]="heroes.guild === 'Mage' || heroes.guild === 'Demon Hunter'"
+      alt="{{heroes.name}} image"
+    >
+</div>

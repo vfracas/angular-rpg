@@ -1,0 +1,70 @@
+
+.reverse{
+  transform: scaleX(-1);
+}
+
+.d-none  {
+  visibility: hidden;
+}
+
+.character{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .enemy, &.enemy{
+    align-items: flex-end;
+  }
+
+  .hero-infos{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    .hero-lifepoints{
+      height: 12px;
+      width: 100%;
+      display: flex;
+      margin-bottom: 10px;
+      border-radius: 15px;
+      border: 2mm ridge rgba(100, 100, 100, .6);
+
+      .remaining-lifepoints{
+        height: 100%;
+        border-radius: 15px;
+      }
+    }
+
+    .hero-title{
+      height: 30px;
+      width: 150px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgba($color: #bbbbbb, $alpha: 0.5);
+
+      .hero-name{
+        font-style: italic;
+      }
+    }
+  }
+  img{
+    width: 80%;
+
+    &.resize{
+      width: 63%;
+    }
+
+    &.resize-bis{
+      width: 78%;
+    }
+
+    &.resize-ter{
+      width: 82%;
+    }
+  }
+}

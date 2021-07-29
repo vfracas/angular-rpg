@@ -60,6 +60,16 @@ export abstract class Hero{
   randomNumber(max: number, min: number = 0): number {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
+  checkHero() {
+    const heroGuild = ['Mage', 'Warlock', 'Demon Hunter', 'Chaman'];
+    let toReverse = false;
+    for(let hero of heroGuild) {
+      if (this.guild === hero){
+        toReverse = true;
+      }
+    }
+    return toReverse;
+  }
 
   attack(target:Hero): void {
     if (target.lifepoints[0] > 0 && this.lifepoints[0] > 0) {

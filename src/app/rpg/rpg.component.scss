@@ -10,59 +10,7 @@
   margin: auto;
 }
 
-.reverse{
-  transform: scaleX(-1);
-}
-
-
-
-.character{
-  height: 90%;
+.app-heroes{
+  height: 98%;
   width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  &.enemy{
-    align-items: flex-end;
-  }
-
-  .hero-lifepoints{
-    width: 70%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 2px 8px 2px 0;
-    background-color: rgb(58, 238, 58);
-    border-radius: 15px;
-    border: 2mm ridge rgba(100, 100, 100, .6);;
-  }
-
-  .hero-title{
-    height: 30px;
-    min-width: 150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba($color: #bbbbbb, $alpha: 0.5);
-
-    .hero-name{
-      font-style: italic;
-    }
-  }
-
-  img{
-    width: 80%;
-
-    &.resize{
-      width: 61%;
-    }
-
-    &.resize-bis{
-      width: 73%;
-    }
-  }
 }
-
